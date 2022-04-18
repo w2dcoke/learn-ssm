@@ -79,10 +79,20 @@ public class UserController {
         System.out.println(name);
     }
 
-    @RequestMapping("/upload")
+    @RequestMapping("/uploadOne")
     @ResponseBody
-    public void upload(MultipartFile multipartFile) throws IOException {
+    public void uploadOne(MultipartFile multipartFile) throws IOException {
         String name = multipartFile.getOriginalFilename();
         multipartFile.transferTo(new File("C:/tmp/" + name));
+    }
+
+    @RequestMapping("/uploadMulti")
+    @ResponseBody
+    public void upload(MultipartFile[] multipartFiles) throws IOException {
+        for (MultipartFile multipartFile : multipartFiles) {
+            String name = multipartFile.getOriginalFilename();
+            multipartFile.transferTo(new File("C:/tmp/" + name));
+        }
+
     }
 }
