@@ -14,4 +14,10 @@ public interface AccountMapper {
     Account findOne(@Param("id") Integer id);
 
     List<Account> findAll();
+
+    int save(Account account);
+
+    int update(Account account);
+
+    int deleteById(Integer id);
 }

@@ -22,13 +22,23 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public int save() {
-        return 0;
+    public List<Account> findAll() {
+        return accountMapper.findAll();
     }
 
     @Override
-    public List<Account> findAll() {
-        return accountMapper.findAll();
+    public int save(Account account) {
+        return accountMapper.save(account);
+    }
+
+    @Override
+    public int update(Account account) {
+        return accountMapper.update(account);
+    }
+
+    @Override
+    public int deleteById(Integer id) {
+        return accountMapper.deleteById(id);
     }
 
 }

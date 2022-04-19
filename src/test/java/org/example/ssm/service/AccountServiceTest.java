@@ -1,6 +1,6 @@
 package org.example.ssm.service;
 
-import org.example.ssm.mapper.AccountMapper;
+import org.example.ssm.pojo.Account;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +25,21 @@ public class AccountServiceTest {
     @Test
     public void findOne() {
         System.out.println(accountService.findOne(1));
+    }
+
+    @Test
+    public void insert() {
+        accountService.save(new Account(null, "kele", 200.0));
+    }
+
+    @Test
+    public void update() {
+        accountService.update(new Account(6, "lele", 200.0));
+    }
+
+    @Test
+    public void deleteById() {
+        accountService.deleteById(6);
     }
 
 }

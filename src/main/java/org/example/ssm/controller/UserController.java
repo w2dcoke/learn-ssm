@@ -58,19 +58,19 @@ public class UserController {
     @RequestMapping(value = "/home7")
     @ResponseBody
     public void index7(User user) {
-        System.out.println(user.toString());
+        System.out.println(user);
     }
 
     @RequestMapping("/home8")
     @ResponseBody
     public void index8(VO vo) {
-        System.out.println(vo.toString());
+        System.out.println(vo);
     }
 
     @RequestMapping("/home9")
     @ResponseBody
     public void index9(@RequestBody List<User> list) {
-        System.out.println(list.toString());
+        System.out.println(list);
     }
 
     @RequestMapping("/home10/{name}")

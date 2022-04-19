@@ -11,7 +11,11 @@ import java.util.List;
 public interface AccountService {
     Account findOne(Integer id);
 
-    int save();
-
     List<Account> findAll();
+
+    int save(Account account);
+
+    int update(Account account);
+
+    int deleteById(Integer id);
 }

@@ -15,4 +15,21 @@
         FROM account
     </select>
 
+    <insert id="save">
+        INSERT INTO account(id, name, money)
+        VALUES (#{id}, #{name}, #{money})
+    </insert>
+
+    <update id="update">
+        UPDATE account
+        SET name  = #{name},
+            money = #{money}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE
+        FROM account
+        WHERE id = #{id}
+    </delete>
 </mapper>
