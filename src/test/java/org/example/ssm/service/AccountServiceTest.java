@@ -28,8 +28,8 @@ public class AccountServiceTest {
     }
 
     @Test
-    public void insert() {
-        accountService.save(new Account(null, "kele", 200.0));
+    public void save() {
+        accountService.save(new Account(null, "keke", 200.0));
     }
 
     @Test

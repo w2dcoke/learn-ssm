@@ -14,7 +14,8 @@ public class TargetController {
     @RequestMapping("/show")
     public ModelAndView show(ModelAndView mv) {
         mv.setViewName("index");
-        System.out.println(1/0);
+        System.out.println(1 / 0);
         return mv;
     }
+
 }
