@@ -39,7 +39,7 @@ public class AccountController {
 
     @GetMapping("/account")
     @ResponseBody
-    public Account find(@Param("id") Integer id) {
+    public Account find(@RequestParam("id") Integer id) {
         return accountService.findOne(id);
     }
 

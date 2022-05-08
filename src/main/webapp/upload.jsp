@@ -11,11 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/${pageContext.request.contextPath}/uploadOne" method="post" enctype="multipart/form-data">
-    <h3>UploadOne</h3>
-    <input type="file" name="multipartFile"/><br>
-    <input type="submit" value="submit"/>
-</form>
 <form action="${pageContext.request.contextPath}/uploadMulti" method="post" enctype="multipart/form-data">
     <h3>UploadMulti</h3>
     <input type="file" name="multipartFiles" multiple/><br>
